@@ -1,0 +1,11 @@
+<h1>Task Manager</h1>
+
+<p id="btn-add"><%= link_to "Add a post", newtask_path %></p>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li><%= task.completed %>
+      <%= link_to task.title, task_path(task) %>
+      <%= task.details %></li>
+  <% end %>
+</ul>
